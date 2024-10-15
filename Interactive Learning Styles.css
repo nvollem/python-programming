@@ -1,0 +1,745 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #2c3e50;
+    padding: 1rem;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #18bc9c;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-content button {
+    background-color: #18bc9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-content button:hover {
+    background-color: #16a085;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    padding: 3rem 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+  
+  .content-section .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background-color: #18bc9c;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+  }
+  
+  /* About Section */
+  #about {
+    background-color: #f9f9f9;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  
+  /* Scroll-to-Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #18bc9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #16a085;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .close-modal {
+    margin-top: 1rem;
+    background-color: #18bc9c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-modal:hover {
+    background-color: #16a085;
+  }
+  
+  #python-executor {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  #user-code {
+    width: 80%;
+    max-width: 600px;
+    margin: 1rem 0;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  #run-code {
+    background-color: #18bc9c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #run-code:hover {
+    background-color: #16a085;
+  }
+  
+  #output {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    font-family: monospace;
+    margin-top: 1rem;
+    white-space: pre-wrap;
+  }
+
+  /* Tooltip Styles */
+.tooltip {
+  position: absolute;
+  background: #2c3e50;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  z-index: 2000;
+} 
+
+#python-editor {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#user-code {
+    width: 80%;
+    max-width: 600px;
+    margin: 1rem 0;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#run-code {
+    background-color: #18bc9c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#run-code:hover {
+    background-color: #16a085;
+}
+
+#output {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    font-family: monospace;
+    margin-top: 1rem;
+    white-space: pre-wrap;
+}
+
+
+#coding-challenges {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#challenge-list {
+    list-style: none;
+    padding: 0;
+}
+
+#challenge-list li {
+    margin: 1rem 0;
+}
+
+#challenge-list button {
+    background-color: #18bc9c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#challenge-list button:hover {
+    background-color: #16a085;
+}
+
+
+
+
+
+
+
+
+
+/* General Body Styling */
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f0f8ff; /* Light blue background for freshness */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section Background */
+.colorful-section {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Gradient background */
+    padding: 3rem 2rem;
+    color: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+/* Code Editor Section */
+#python-editor {
+    background: #fff5ee; /* Seashell color */
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#user-code {
+    width: 90%;
+    max-width: 700px;
+    height: 150px;
+    font-family: monospace;
+    padding: 1rem;
+    border: 2px solid #ffa07a; /* Light salmon border */
+    border-radius: 8px;
+    background: #fffaf0; /* Floral white */
+}
+
+#run-code {
+    background: #32cd32; /* Lime Green */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(50, 205, 50, 0.3);
+}
+
+#run-code:hover {
+    background: #228b22; /* Forest Green */
+    transform: scale(1.05);
+}
+
+#output {
+    background: #2e8b57; /* Sea green */
+    color: #ffffff;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    text-align: left;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles for Other Sections */
+.start-learning-btn {
+    background: #ff6347; /* Tomato */
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 2rem 0;
+}
+
+.start-learning-btn:hover {
+    background: #ff4500; /* Orange Red */
+    transform: scale(1.1);
+}
+
+/* Heading Styles */
+h2 {
+    font-size: 2rem;
+    color: #1e90ff; /* Dodger blue */
+    margin-bottom: 1rem;
+}
+
+/* Icon and Illustration Styles */
+.icon {
+    font-size: 1.5rem;
+    color: #ffa500; /* Orange */
+    margin-right: 0.5rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adding Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.colorful-container {
+    animation: slideIn 1s ease-out;
+}
+
+/* Navigation Links */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: #ffffff;
+    padding: 0.75rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffa500; /* Orange */
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+
+
+
+/* Learn Python Interactively Section */
+.learn-python-section {
+    background: #4a90e2; /* Light blue background */
+    color: #ffffff; /* White text for better contrast */
+    padding: 3rem;
+    margin: 2rem auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+}
+
+.learn-python-section h2 {
+    font-size: 2.5rem; /* Larger font size for title */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Keep the text color white */
+}
+
+.learn-python-section p {
+    font-size: 1.2rem; /* Increase font size for better readability */
+    margin-bottom: 2rem;
+    color: #f0f8ff; /* Lighter text color for description */
+}
+
+.learn-python-section .start-learning-btn {
+    background: #ffa500; /* Orange button for strong contrast */
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.learn-python-section .start-learning-btn:hover {
+    background: #ff4500; /* Darker orange for hover */
+    transform: scale(1.1); /* Slight zoom on hover for effect */
+}
+
+
+
+
+/* General Section Styling */
+.content-section {
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Python Editor Section */
+#python-editor {
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7); /* Light purple gradient */
+    text-align: center;
+}
+
+#user-code {
+    width: 80%;
+    max-width: 700px;
+    height: 150px;
+    font-family: monospace;
+    padding: 1rem;
+    border: 2px solid #8e44ad; /* Purple border */
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+#run-code {
+    background: #8e44ad; /* Purple button */
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
+}
+
+#run-code:hover {
+    background: #5e3370; /* Darker purple on hover */
+    transform: scale(1.05);
+}
+
+#output {
+    background: #4a235a; /* Dark purple for output box */
+    color: #ffffff;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    text-align: left;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Learn Python Interactively Section */
+.learn-python-section {
+    background: linear-gradient(135deg, #e3f2fd, #90caf9); /* Light blue gradient */
+    color: #ffffff;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.learn-python-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #0d47a1; /* Dark blue */
+}
+
+.learn-python-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.learn-python-section .start-learning-btn {
+    background: #1976d2; /* Bright blue button */
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.learn-python-section .start-learning-btn:hover {
+    background: #0d47a1; /* Dark blue on hover */
+    transform: scale(1.1);
+}
+
+/* Coding Challenges Section */
+#coding-challenges {
+    background: linear-gradient(135deg, #ffebee, #ef9a9a); /* Light pink gradient */
+    color: #333;
+    text-align: center;
+}
+
+#challenge-list button {
+    background: #e53935; /* Red button */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+    border: none;
+    margin: 0.5rem;
+    box-shadow: 0 3px 6px rgba(229, 57, 53, 0.3);
+}
+
+#challenge-list button:hover {
+    background: #b71c1c; /* Darker red on hover */
+}
+
+/* Resources Section */
+#resources {
+    background: linear-gradient(135deg, #e8f5e9, #81c784); /* Light green gradient */
+    color: #2e7d32;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#resources h2 {
+    color: #1b5e20; /* Dark green */
+}
+
+
+
+/* General Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    #python-editor {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    #user-code {
+        width: 100%;
+        height: 120px;
+    }
+
+    .learn-python-section h2 {
+        font-size: 2rem;
+    }
+
+    .learn-python-section p {
+        font-size: 1rem;
+    }
+
+    #challenge-list button {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 0.5rem;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 480px) {
+    #run-code {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .learn-python-section {
+        padding: 2rem 1rem;
+    }
+
+    #output {
+        font-size: 0.9rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar a.active {
+    color: #ffa500; /* Highlight active link in orange */
+    font-weight: bold;
+    border-bottom: 2px solid #ffa500; /* Add an underline for the active link */
+}
+
+
