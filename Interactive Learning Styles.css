@@ -743,3 +743,107 @@ html {
 }
 
 
+/* Get in Touch Section */
+.get-in-touch-section {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.get-in-touch-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form, .contact-details {
+    flex: 1;
+    min-width: 300px;
+    margin: 1rem;
+}
+
+.contact-form h2, .contact-details h3 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form p {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-checkbox input {
+    margin-right: 0.5rem;
+}
+
+.submit-button {
+    background-color: #32cd32; /* Lime green */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #228b22; /* Forest green */
+}
+
+.contact-details {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-details i {
+    margin-right: 0.5rem;
+}
+
+.working-hours {
+    list-style: none;
+    padding: 0;
+}
+
+.working-hours li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+
+
